@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+	.text {
+		@apply text-xs leading-[14px] -tracking-[0.01em];
+	}
+
+	.nav-item-top {
+		@apply px-2 py-1 transition-all hover:bg-black hover:text-white hover:rounded-md;
+	}
+
+	.nav-item-bottom {
+		@apply py-[9px] px-[19px] transition-all hover:bg-yellow hover:text-[#000];
+	}
+}

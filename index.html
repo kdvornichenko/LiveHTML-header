@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Test task for LiveHTML for the position of frontend developer"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="./src/fonts/fonts.css" rel="stylesheet" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<link rel="shortcut icon" href="./src/img/favicon.svg" />
+		<title>Магазин инструмента - LiveHTML</title>
+	</head>
+	<body class="font-roboto max-w-[1170px] mx-auto">
+		<header>
+			<div class="container pt-[19px]">
+				<!-- FIRST ROW -->
+				<div class="flex gap-[30px]">
+					<!-- LOGO -->
+					<img src="./src/img/logo.svg" alt="Logo" />
+
+					<!-- LOGO END -->
+
+					<!-- MAIN -->
+					<div class="w-full">
+						<!-- TOP NAV -->
+						<div
+							class="flex justify-between text border-b-[1px] border-grey pb-2"
+						>
+							<nav>
+								<ul class="flex gap-3 text-black">
+									<li>
+										<a href="#" target="_blank" class="nav-item-top"
+											>Каталог инструментов</a
+										>
+									</li>
+									<li>
+										<a href="#" target="_blank" class="nav-item-top"
+											>Все для сада</a
+										>
+									</li>
+									<li>
+										<a href="#" target="_blank" class="nav-item-top"
+											>Ручной интрумент</a
+										>
+									</li>
+									<li>
+										<a href="#" target="_blank" class="nav-item-top"
+											>Электрика</a
+										>
+									</li>
+									<li>
+										<a href="#" target="_blank" class="nav-item-top"
+											>Доставка</a
+										>
+									</li>
+									<li>
+										<a href="#" target="_blank" class="nav-item-top">Оплата</a>
+									</li>
+									<li>
+										<a href="#" target="_blank" class="nav-item-top">О нас</a>
+									</li>
+								</ul>
+							</nav>
+							<div class="flex">
+								<a href="#" class="pr-[13px] border-r-[1px]">Вход</a>
+								<a href="#" class="ml-[14px]">Регистрация</a>
+							</div>
+						</div>
+						<!-- TOP NAV END -->
+
+						<!-- CART + CONTACST -->
+						<div class="flex justify-between mt-[22px]">
+							<img src="./src/img/banner.svg" alt="Banner" />
+							<!-- LIST -->
+							<div>
+								<ul class="text">
+									<li id="shoppingCart" class="">
+										<a
+											rel="nofollow"
+											title="Корзина"
+											href="#"
+											class="underline relative before:absolute before:w-[19px] before:h-[18px] before:bg-shoppingCart before:top-1/2 before:-translate-y-[50%] before:-left-[30px]"
+										>
+											<span id="numberOfItems">3</span>
+											шт./
+											<span id="totalPrice">17 250</span>
+											р.
+										</a>
+									</li>
+									<li id="favorite" class="mt-3">
+										<a
+											rel="nofollow"
+											title="Избранное"
+											href="#"
+											class="underline relative before:absolute before:w-[14px] before:h-[14px] before:bg-star before:top-1/2 before:-translate-y-[50%] before:-left-[25px]"
+											>Избранное (<span id="numberOfFavorite">7</span>)
+										</a>
+									</li>
+									<li id="compare" class="mt-3">
+										<a
+											rel="nofollow"
+											title="К сравнению"
+											href="#"
+											class="underline relative before:absolute before:w-[18px] before:h-[16px] before:bg-balance before:top-1/2 before:-translate-y-[50%] before:-left-[27px]"
+											>К сравнению (<span id="numberOfCompare">5</span>)
+										</a>
+									</li>
+								</ul>
+							</div>
+							<!-- LIST END -->
+
+							<!-- SHOPPING CART ITEMS PREVIEW -->
+							<div id="shoppingCartItemsPreview" class="flex gap-[15px]">
+								<a href="#">
+									<img src="./src/img/item1.png" alt="Shopping Cart Item" />
+								</a>
+								<a href="#">
+									<img src="./src/img/item2.png" alt="Shopping Cart Item" />
+								</a>
+								<a href="#">
+									<img src="./src/img/item3.png" alt="Shopping Cart Item" />
+								</a>
+							</div>
+							<!-- SHOPPING CART ITEMS PREVIEW END -->
+
+							<div>
+								<div class="flex justify-between">
+									<div class="font-bold text">Время работы:</div>
+									<div class="text-xs leading-[14px] tracking-tight">
+										10:00 — 19:00
+									</div>
+								</div>
+								<div
+									class="mt-[15px] font-bold text-[25px] leading-[29px] -tracking-[0.02em]"
+								>
+									<a
+										href="tel:84957212525"
+										class="hover:text-yellow transition-all"
+										>8 495 721-25-25</a
+									>
+								</div>
+							</div>
+						</div>
+						<!-- CART + CONTACST END -->
+					</div>
+					<!-- MAIN END -->
+				</div>
+
+				<!-- MAIN SUBSTRING -->
+				<div class="flex justify-between">
+					<div
+						class="w-[210px] mt-2 font-heliosCond font-bold uppercase text-center text-[13px] leading-[15px]"
+					>
+						магазин инструмента
+					</div>
+					<div
+						class="text flex justify-between w-[182px] pt-1 border-t-[1px] border-grey"
+					>
+						<div id="city">Москва</div>
+						<button
+							id="cityChange"
+							class="relative decoration-dotted underline before:absolute before:w-[7px] before:h-[7px] before:bg-arrow before:top-1/2 before:-translate-y-[50%] before:-left-[11px]"
+						>
+							сменить
+						</button>
+					</div>
+				</div>
+				<!-- MAIN SUBSTRING -->
+
+				<!-- FIRST ROW END -->
+
+				<!-- NAVIGATION -->
+				<nav
+					class="mt-[26px] flex justify-between bg-black shadow-nav rounded-[10px]"
+				>
+					<div class="bg-yellow rounded-l-[8px]">
+						<button class="px-5 bg-search h-full bg-no-repeat bg-center" />
+					</div>
+					<div class="">
+						<ul
+							class="flex items-center text-white font-semibold text-sm leading-4"
+						>
+							<li class="mt-[9px]">
+								<a href="#" class="nav-item-bottom">Перфораторы</a>
+							</li>
+							<li class="mt-[9px]">
+								<a href="#" class="nav-item-bottom">Дрели</a>
+							</li>
+							<li class="mt-[9px]">
+								<a href="#" class="nav-item-bottom">Шлифмашины</a>
+							</li>
+							<li class="mt-[9px]">
+								<a href="#" class="nav-item-bottom">Пистолеты</a>
+							</li>
+							<li class="mt-[9px]">
+								<a href="#" class="nav-item-bottom">Электропилы</a>
+							</li>
+							<li class="mt-[9px]">
+								<a href="#" class="nav-item-bottom">Наборы инструментов</a>
+							</li>
+							<li class="mt-[9px]">
+								<a href="#" class="nav-item-bottom">Акксесуары</a>
+							</li>
+						</ul>
+					</div>
+					<div
+						class="nav-item-bottom uppercase font-semibold text-sm leading-4 bg-yellow rounded-r-[8px]"
+					>
+						<a href="#" class="hover:text-white">Распродажа</a>
+					</div>
+				</nav>
+				<!-- NAVIGATION END -->
+			</div>
+		</header>
+	</body>
+</html>
