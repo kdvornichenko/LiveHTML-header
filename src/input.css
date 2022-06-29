@@ -12,6 +12,37 @@
 	}
 
 	.nav-item-bottom {
-		@apply py-[9px] px-[19px] transition-all hover:bg-yellow hover:text-[#000];
+		@apply block py-[9px] px-4 xl:px-[19px] transition-all hover:bg-yellow hover:text-[#000];
 	}
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+	position: absolute;
+	top: 25%;
+	color: #252525;
+	font-size: 26px;
+}
+
+.swiper-button-prev::after {
+	right: 0%;
+}
+
+.swiper-button-next::after {
+	left: 0%;
+}
+
+#cityChange.rotate::before {
+	transform: rotate(90deg) translateX(-50%);
+}
+
+#listOfCities.hide {
+	height: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#listOfCities.show {
+	height: max-content;
+	padding: 16px;
 }

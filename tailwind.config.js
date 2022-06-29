@@ -5,6 +5,7 @@ module.exports = {
 		backgroundColor: {
 			black: '#252525',
 			yellow: '#FFCC00',
+			white: '#ffffff',
 		},
 		container: {
 			center: true,
@@ -19,6 +20,8 @@ module.exports = {
 			backgroundImage: {
 				arrow: 'url("../src/img/change-city-arrow.svg")',
 				balance: 'url("../src/img/balance.svg")',
+				banner1280: 'url("../src/img/banner1280.svg")',
+				banner1024: 'url("../src/img/banner1024.svg")',
 				search: 'url("../src/img/search-icon.svg")',
 				shoppingCart: 'url("../src/img/shopping-cart.svg")',
 				star: 'url("../src/img/star.svg")',
