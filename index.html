@@ -8,12 +8,6 @@
 			name="description"
 			content="Test task for LiveHTML for the position of frontend developer"
 		/>
-		<link
-			rel="stylesheet"
-			href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-		/>
-
-		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -25,235 +19,391 @@
 		<link rel="shortcut icon" href="./src/img/favicon.svg" />
 		<title>Магазин инструмента - LiveHTML</title>
 	</head>
-	<body class="font-roboto max-w-[1170px] mx-auto">
+	<body class="overflow-x-hidden font-roboto max-w-[1170px] mx-auto">
 		<header>
-			<div class="container pt-[19px]">
-				<div class="wrapper hidden lg:block">
-					<!-- FIRST ROW -->
-					<div class="flex gap-[15px] lg:gap-[30px]">
-						<!-- LOGO -->
-						<img src="./src/img/logo.svg" alt="Logo" />
+			<div class="container md:pt-0 lg:pt-3 xl:pt-[19px]">
+				<!-- MOBILE MENU -->
+				<div
+					id="mobMenu"
+					class="block -left-full md:hidden fixed min-w-[260px] max-w-[400px] h-[100vh] p-3 bg-white shadow-2xl transition-all z-50"
+				>
+					<div
+						id="burger"
+						class="absolute right-10 top-4 burger flex items-center text-base cursor-pointer z-20"
+					>
+						<div
+							class="before:block before:absolute before:w-6 before:h-0.5 before:bg-black before:rotate-45 before:translate-y-3 before:rounded-2xl before:-mt-1.5 after:block after:absolute after:w-6 after:h-0.5 after:bg-black after:-rotate-45 after:rounded-2xl after:mt-1.5"
+						></div>
+					</div>
+					<!-- LOGIN -->
+					<div class="flex">
+						<a href="#" class="pr-[13px] border-r-[1px]">Вход</a>
+						<a href="#" class="ml-[14px]">Регистрация</a>
+					</div>
+					<!-- LOGIN END -->
 
-						<!-- LOGO END -->
-
-						<!-- MAIN -->
-						<div class="w-full">
-							<!-- TOP NAV -->
-							<div
-								class="flex justify-between text border-b-[1px] border-grey pb-2"
-							>
-								<nav>
-									<ul class="flex 2xl:gap-3 text-black">
-										<li>
-											<a href="#" target="_blank" class="nav-item-top"
-												>Каталог инструментов</a
-											>
-										</li>
-										<li>
-											<a href="#" target="_blank" class="nav-item-top"
-												>Все для сада</a
-											>
-										</li>
-										<li>
-											<a href="#" target="_blank" class="nav-item-top"
-												>Ручной интрумент</a
-											>
-										</li>
-										<li>
-											<a href="#" target="_blank" class="nav-item-top"
-												>Электрика</a
-											>
-										</li>
-										<li>
-											<a href="#" target="_blank" class="nav-item-top"
-												>Доставка</a
-											>
-										</li>
-										<li>
-											<a href="#" target="_blank" class="nav-item-top"
-												>Оплата</a
-											>
-										</li>
-										<li>
-											<a href="#" target="_blank" class="nav-item-top">О нас</a>
-										</li>
-									</ul>
-								</nav>
-								<div class="flex">
-									<a href="#" class="pr-[13px] border-r-[1px]">Вход</a>
-									<a href="#" class="ml-[14px]">Регистрация</a>
-								</div>
+					<!-- CONTACTS -->
+					<div class="mt-4">
+						<div class="flex gap-1">
+							<div class="font-bold text">Время работы:</div>
+							<div class="text-xs leading-[14px] tracking-tight">
+								10:00 — 19:00
 							</div>
-							<!-- TOP NAV END -->
-
-							<!-- CART + CONTACST -->
-							<div class="flex justify-between mt-[10px] lg:mt-[22px]">
-								<div
-									class="md:bg-banner1024 xl:bg-banner1280 md:w-48 xl:w-64"
-								></div>
-								<!-- LIST -->
-								<div>
-									<ul class="text">
-										<li id="shoppingCart" class="">
-											<a
-												rel="nofollow"
-												title="Корзина"
-												href="#"
-												class="underline relative before:absolute before:w-[19px] before:h-[18px] before:bg-shoppingCart before:top-1/2 before:-translate-y-[50%] before:-left-[30px]"
-											>
-												<span id="numberOfItems">3</span>
-												шт./
-												<span id="totalPrice">17 250</span>
-												р.
-											</a>
-										</li>
-										<li id="favorite" class="mt-3">
-											<a
-												rel="nofollow"
-												title="Избранное"
-												href="#"
-												class="underline relative before:absolute before:w-[14px] before:h-[14px] before:bg-star before:top-1/2 before:-translate-y-[50%] before:-left-[25px]"
-												>Избранное (<span id="numberOfFavorite">7</span>)
-											</a>
-										</li>
-										<li id="compare" class="mt-3">
-											<a
-												rel="nofollow"
-												title="К сравнению"
-												href="#"
-												class="underline relative before:absolute before:w-[18px] before:h-[16px] before:bg-balance before:top-1/2 before:-translate-y-[50%] before:-left-[27px]"
-												>К сравнению (<span id="numberOfCompare">5</span>)
-											</a>
-										</li>
-									</ul>
-								</div>
-								<!-- LIST END -->
-
-								<!-- SHOPPING CART ITEMS PREVIEW -->
-								<div
-									id="shoppingCartItemsPreview"
-									class="gap-1 xl:gap-[15px] hidden lg:flex"
-								>
-									<a href="#">
-										<img src="./src/img/item1.png" alt="Shopping Cart Item" />
-									</a>
-									<a href="#">
-										<img src="./src/img/item2.png" alt="Shopping Cart Item" />
-									</a>
-									<a href="#">
-										<img src="./src/img/item3.png" alt="Shopping Cart Item" />
-									</a>
-								</div>
-								<!-- SHOPPING CART ITEMS PREVIEW END -->
-
-								<div>
-									<div class="flex justify-between">
-										<div class="font-bold text">Время работы:</div>
-										<div class="text-xs leading-[14px] tracking-tight">
-											10:00 — 19:00
-										</div>
-									</div>
-									<div
-										class="mt-[15px] font-bold text-[22px] xl:text-[25px] leading-[29px] -tracking-[0.02em]"
-									>
-										<a
-											href="tel:84957212525"
-											class="hover:text-yellow transition-all"
-											>8 495 721-25-25</a
-										>
-									</div>
-								</div>
-							</div>
-							<!-- CART + CONTACST END -->
 						</div>
-						<!-- MAIN END -->
+						<div
+							class="mt-2 font-bold text-[22px] xl:text-[25px] leading-[29px] -tracking-[0.02em]"
+						>
+							<a href="tel:84957212525" class="hover:text-yellow transition-all"
+								>8 495 721-25-25</a
+							>
+						</div>
+					</div>
+					<!-- CONTACTS END -->
+
+					<!-- LOCATION -->
+					<div
+						id="location"
+						class="mt-2 text flex justify-between w-40 xl:w-[182px] pt-1 border-t-[1px] border-grey"
+					>
+						<div id="city">Москва</div>
+						<div class="relative text-right">
+							<button
+								id="cityChange"
+								class="relative decoration-dotted underline before:absolute before:w-[7px] before:h-[7px] before:bg-arrow before:top-1/2 before:-translate-y-[50%] before:-left-[11px] before:transition-all"
+							>
+								сменить
+							</button>
+							<ul
+								id="listOfCities"
+								class="hide absolute top-6 right-0 w-max translate-x-1/3 flex flex-col gap-2 text-left bg-white p-4 shadow-nav transition-all"
+							>
+								<li id="cityName">
+									<a href="#" class="nav-item-top">Екатеринбург</a>
+								</li>
+								<li id="cityName">
+									<a href="#" class="nav-item-top">Москва</a>
+								</li>
+								<li id="cityName">
+									<a href="#" class="nav-item-top">Санкт-Петербург</a>
+								</li>
+								<li id="cityName">
+									<a href="#" class="nav-item-top">Тюмень</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- LOCATION END -->
+
+					<!-- FAVORITE + COMPARE -->
+					<div class="mt-6 flex gap-6">
+						<div id="favorite">
+							<a rel="nofollow" title="Избранное" href="#" class="">
+								<img src="./src/img/star.svg" alt="Избранное" class="h-7" />
+							</a>
+						</div>
+						<div id="compare">
+							<a rel="nofollow" title="К сравнению" href="#" class="">
+								<img src="./src/img/balance.svg" alt="Сравнение" class="h-7" />
+							</a>
+						</div>
+					</div>
+					<!-- FAVORITE + COMPARE END -->
+
+					<!-- MENU LIST -->
+					<nav class="mt-6">
+						<ul class="flex flex-col gap-2 text-black -ml-2">
+							<li>
+								<a href="#" class="nav-item-top md:pl-0"
+									>Каталог инструментов</a
+								>
+							</li>
+							<li>
+								<a href="#" class="nav-item-top">Все для сада</a>
+							</li>
+							<li>
+								<a href="#" class="nav-item-top">Ручной интрумент</a>
+							</li>
+							<li>
+								<a href="#" class="nav-item-top">Электрика</a>
+							</li>
+							<li>
+								<a href="#" class="nav-item-top">Доставка</a>
+							</li>
+							<li>
+								<a href="#" class="nav-item-top">Оплата</a>
+							</li>
+							<li>
+								<a href="#" class="nav-item-top">О нас</a>
+							</li>
+						</ul>
+					</nav>
+					<!-- MENU LIST END -->
+				</div>
+				<!-- MOBILE MENU END -->
+
+				<!-- MOBILE HEADER -->
+				<div
+					class="fixed left-8 top-4 w-[90%] flex md:hidden justify-between items-center z-0"
+				>
+					<div
+						id="burger"
+						class="burger flex items-center text-base cursor-pointer z-20"
+					>
+						<div
+							class="w-6 h-0.5 rounded-2xl bg-black before:block before:absolute before:w-6 before:h-0.5 before:bg-black before:rounded-2xl before:-mt-1.5 after:block after:absolute after:w-6 after:h-0.5 after:bg-black after:rounded-2xl after:mt-1.5"
+						></div>
 					</div>
 
-					<!-- MAIN SUBSTRING -->
-					<div class="flex justify-between">
+					<div>
+						<img
+							src="./src/img/logo.svg"
+							alt="Logo"
+							class="max-w-[100px] m-auto"
+						/>
 						<div
-							class="w-[210px] mt-2 font-heliosCond font-bold uppercase text-center text-[13px] leading-[15px]"
+							class="mt-1 font-heliosCond font-bold uppercase text-center text-[10px]"
 						>
 							магазин инструмента
 						</div>
-						<div
-							id="location"
-							class="text flex justify-between w-40 xl:w-[182px] pt-1 border-t-[1px] border-grey"
-						>
-							<div id="city">Москва</div>
-							<div class="relative text-right">
-								<button
-									id="cityChange"
-									class="relative decoration-dotted underline before:absolute before:w-[7px] before:h-[7px] before:bg-arrow before:top-1/2 before:-translate-y-[50%] before:-left-[11px] before:transition-all"
+					</div>
+
+					<div id="shoppingCart" class="right-[5%]">
+						<a rel="nofollow" title="Корзина" href="#" class="underline">
+							<img
+								src="./src/img/shopping-cart.svg"
+								alt="Корзина"
+								class="w-10 m-auto"
+							/>
+						</a>
+					</div>
+				</div>
+				<!-- MOBILE HEADER END -->
+
+				<!-- DESKTOP HEADER -->
+				<div class="wrapper-all hidden md:block">
+					<div class="wrapper-first-row hidden md:block">
+						<!-- FIRST ROW -->
+						<div class="relative pt-11 lg:pt-0 flex gap-[60px] lg:gap-[30px]">
+							<!-- LOGO -->
+							<img
+								src="./src/img/logo.svg"
+								alt="Logo"
+								class="w-[125px] lg:w-[210px] self-end"
+							/>
+							<!-- LOGO END -->
+
+							<!-- MAIN -->
+							<div class="w-full">
+								<!-- TOP NAV -->
+								<div
+									class="absolute w-full lg:relative top-5 lg:top-0 left-0 flex justify-between text border-b-[1px] border-grey pb-2"
 								>
-									сменить
-								</button>
-								<ul
-									id="listOfCities"
-									class="hide absolute top-6 right-0 w-max translate-x-1/3 flex flex-col gap-2 text-left bg-white p-4 shadow-nav transition-all"
-								>
-									<li>
-										<a href="#" class="nav-item-top">Екатеринбург</a>
-									</li>
-									<li>
-										<a href="#" class="nav-item-top">Москва</a>
-									</li>
-									<li>
-										<a href="#" class="nav-item-top">Санкт-Петербург</a>
-									</li>
-									<li>
-										<a href="#" class="nav-item-top">Тюмень</a>
-									</li>
-								</ul>
+									<nav>
+										<ul class="flex 2xl:gap-3 text-black">
+											<li>
+												<a href="#" class="nav-item-top sm:pl-0"
+													>Каталог инструментов</a
+												>
+											</li>
+											<li>
+												<a href="#" class="nav-item-top">Все для сада</a>
+											</li>
+											<li>
+												<a href="#" class="nav-item-top">Ручной интрумент</a>
+											</li>
+											<li>
+												<a href="#" class="nav-item-top">Электрика</a>
+											</li>
+											<li>
+												<a href="#" class="nav-item-top">Доставка</a>
+											</li>
+											<li>
+												<a href="#" class="nav-item-top">Оплата</a>
+											</li>
+											<li>
+												<a href="#" class="nav-item-top">О нас</a>
+											</li>
+										</ul>
+									</nav>
+									<div class="flex">
+										<a href="#" class="pr-[13px] border-r-[1px]">Вход</a>
+										<a href="#" class="ml-[14px]">Регистрация</a>
+									</div>
+								</div>
+								<!-- TOP NAV END -->
+
+								<!-- CART + CONTACST -->
+								<div class="flex justify-between mt-[10px] lg:mt-[22px]">
+									<div
+										class="md:bg-banner1024 xl:bg-banner1280 md:w-48 xl:w-64"
+									></div>
+									<!-- LIST -->
+									<div>
+										<ul class="text">
+											<li id="shoppingCart" class="">
+												<a
+													rel="nofollow"
+													title="Корзина"
+													href="#"
+													class="underline relative before:absolute before:w-[19px] before:h-[18px] before:bg-shoppingCart before:top-1/2 before:-translate-y-[50%] before:-left-[30px]"
+												>
+													<span id="numberOfItems">3</span>
+													шт./
+													<span id="totalPrice">17 250</span>
+													р.
+												</a>
+											</li>
+											<li id="favorite" class="mt-3">
+												<a
+													rel="nofollow"
+													title="Избранное"
+													href="#"
+													class="underline relative before:absolute before:w-[14px] before:h-[14px] before:bg-star before:top-1/2 before:-translate-y-[50%] before:-left-[25px]"
+													>Избранное (<span id="numberOfFavorite">7</span>)
+												</a>
+											</li>
+											<li id="compare" class="mt-3">
+												<a
+													rel="nofollow"
+													title="К сравнению"
+													href="#"
+													class="underline relative before:absolute before:w-[18px] before:h-[16px] before:bg-balance before:top-1/2 before:-translate-y-[50%] before:-left-[27px]"
+													>К сравнению (<span id="numberOfCompare">5</span>)
+												</a>
+											</li>
+										</ul>
+									</div>
+									<!-- LIST END -->
+
+									<!-- SHOPPING CART ITEMS PREVIEW -->
+									<div
+										id="shoppingCartItemsPreview"
+										class="gap-1 xl:gap-[15px] hidden lg:flex"
+									>
+										<a href="#">
+											<img src="./src/img/item1.png" alt="Shopping Cart Item" />
+										</a>
+										<a href="#">
+											<img src="./src/img/item2.png" alt="Shopping Cart Item" />
+										</a>
+										<a href="#">
+											<img src="./src/img/item3.png" alt="Shopping Cart Item" />
+										</a>
+									</div>
+									<!-- SHOPPING CART ITEMS PREVIEW END -->
+
+									<div>
+										<div class="flex justify-between">
+											<div class="font-bold text">Время работы:</div>
+											<div class="text-xs leading-[14px] tracking-tight">
+												10:00 — 19:00
+											</div>
+										</div>
+										<div
+											class="mt-[15px] font-bold text-[22px] xl:text-[25px] leading-[29px] -tracking-[0.02em]"
+										>
+											<a
+												href="tel:84957212525"
+												class="hover:text-yellow transition-all"
+												>8 495 721-25-25</a
+											>
+										</div>
+									</div>
+								</div>
+								<!-- CART + CONTACST END -->
+							</div>
+							<!-- MAIN END -->
+						</div>
+
+						<!-- MAIN SUBSTRING -->
+						<div class="flex justify-between">
+							<div
+								class="w-[125px] lg:w-[210px] mt-2 font-heliosCond font-bold uppercase text-center text-[12px] lg:text-[13px] leading-[15px]"
+							>
+								магазин инструмента
+							</div>
+							<div
+								id="location"
+								class="text flex justify-between w-40 xl:w-[182px] pt-1 border-t-[1px] border-grey"
+							>
+								<div id="city">Москва</div>
+								<div class="relative text-right">
+									<button
+										id="cityChange"
+										class="relative decoration-dotted underline before:absolute before:w-[7px] before:h-[7px] before:bg-arrow before:top-1/2 before:-translate-y-[50%] before:-left-[11px] before:transition-all"
+									>
+										сменить
+									</button>
+									<ul
+										id="listOfCities"
+										class="hide absolute top-6 right-0 w-max translate-x-1/3 flex flex-col gap-2 text-left bg-white p-4 shadow-nav transition-all"
+									>
+										<li id="cityName">
+											<a href="#" class="nav-item-top">Екатеринбург</a>
+										</li>
+										<li id="cityName">
+											<a href="#" class="nav-item-top">Москва</a>
+										</li>
+										<li id="cityName">
+											<a href="#" class="nav-item-top">Санкт-Петербург</a>
+										</li>
+										<li id="cityName">
+											<a href="#" class="nav-item-top">Тюмень</a>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
+						<!-- MAIN SUBSTRING -->
 					</div>
-					<!-- MAIN SUBSTRING -->
-				</div>
 
-				<!-- FIRST ROW END -->
+					<!-- FIRST ROW END -->
 
-				<!-- NAVIGATION -->
-				<nav
-					class="mt-[26px] flex justify-between bg-black shadow-nav rounded-[10px]"
-				>
-					<div class="bg-yellow rounded-l-[8px]">
-						<button class="px-5 bg-search h-full bg-no-repeat bg-center" />
-					</div>
-					<div class="">
-						<ul
-							class="flex items-center text-white font-semibold text-sm leading-4"
-						>
-							<li>
-								<a href="#" class="nav-item-bottom">Перфораторы</a>
-							</li>
-							<li>
-								<a href="#" class="nav-item-bottom">Дрели</a>
-							</li>
-							<li>
-								<a href="#" class="nav-item-bottom">Шлифмашины</a>
-							</li>
-							<li>
-								<a href="#" class="nav-item-bottom">Пистолеты</a>
-							</li>
-							<li>
-								<a href="#" class="nav-item-bottom">Электропилы</a>
-							</li>
-							<li>
-								<a href="#" class="nav-item-bottom">Наборы инструментов</a>
-							</li>
-							<li>
-								<a href="#" class="nav-item-bottom">Акксесуары</a>
-							</li>
-						</ul>
-					</div>
-					<div
-						class="nav-item-bottom uppercase font-semibold text-sm leading-4 bg-yellow rounded-r-[8px]"
+					<!-- NAVIGATION -->
+					<nav
+						class="mt-2 lg:mt-[26px] flex justify-between bg-black shadow-nav rounded-[10px]"
 					>
-						<a href="#" class="hover:text-white">Распродажа</a>
-					</div>
-				</nav>
-				<!-- NAVIGATION END -->
+						<div class="bg-yellow rounded-l-[8px]">
+							<button class="px-5 bg-search h-full bg-no-repeat bg-center" />
+						</div>
+						<div class="">
+							<ul
+								class="flex items-center text-white font-medium lg:font-semibold md:text-[0.72rem] lg:text-sm leading-4"
+							>
+								<li>
+									<a href="#" class="nav-item-bottom">Перфораторы</a>
+								</li>
+								<li>
+									<a href="#" class="nav-item-bottom">Дрели</a>
+								</li>
+								<li>
+									<a href="#" class="nav-item-bottom">Шлифмашины</a>
+								</li>
+								<li>
+									<a href="#" class="nav-item-bottom">Пистолеты</a>
+								</li>
+								<li>
+									<a href="#" class="nav-item-bottom">Электропилы</a>
+								</li>
+								<li>
+									<a href="#" class="nav-item-bottom">Наборы инструментов</a>
+								</li>
+								<li>
+									<a href="#" class="nav-item-bottom">Акксесуары</a>
+								</li>
+								<li>
+									<a
+										href="#"
+										class="nav-item-bottom uppercase bg-yellow rounded-r-[8px] text-black hover:text-white"
+										>Распродажа</a
+									>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<!-- NAVIGATION END -->
+				</div>
+				<!-- DESKTOP HEADER END -->
 			</div>
 		</header>
 
