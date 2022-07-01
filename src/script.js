@@ -1,7 +1,7 @@
 const burger = document.querySelectorAll('#burger')
 const mobMenu = document.querySelector('#mobMenu')
 
-// Burger
+// Мобильное меню
 burger.forEach(e =>
 	e.addEventListener('click', function () {
 		mobMenu.classList.toggle('-left-full')
@@ -33,6 +33,7 @@ cities.forEach(e =>
 		city.forEach(e => (e.innerText = this.innerText))
 		openListOfCities()
 		saveToLocalStorage()
+		console.log(1)
 	})
 )
 
@@ -52,6 +53,3 @@ searchBtn.addEventListener('click', function () {
 	searchForm.classList.toggle('top-0')
 	searchInput.focus()
 })
-
-
-
