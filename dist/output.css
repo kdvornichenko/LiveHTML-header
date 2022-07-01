@@ -1389,8 +1389,16 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:-ml-2 {
+    margin-left: -0.5rem;
+  }
+
   .sm\:pl-0 {
     padding-left: 0px;
+  }
+
+  .sm\:hover\:pl-2:hover {
+    padding-left: 0.5rem;
   }
 }
 
