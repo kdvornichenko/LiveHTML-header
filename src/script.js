@@ -4,8 +4,7 @@ const qurrentLocation = document.querySelector('#location')
 const cityChange = document.querySelectorAll('#cityChange')
 const listOfCities = document.querySelectorAll('#listOfCities')
 const cities = document.querySelectorAll('#cityName')
-let city = document.querySelector('#city')
-console.log(listOfCities)
+let city = document.querySelectorAll('#city')
 
 // Burger
 burger.forEach(e =>
@@ -17,25 +16,25 @@ burger.forEach(e =>
 
 // Смена города
 if (localStorage.getItem('city')) {
-	city.innerText = JSON.parse(localStorage.getItem('city'))
+	city.forEach(e => (e.innerText = JSON.parse(localStorage.getItem('city'))))
 }
 
-cityChange.forEach(e =>
-	e.addEventListener('click', function () {
-		listOfCities.forEach(e => e.classList.toggle('hide'))
-		this.classList.toggle('rotate')
-	})
-)
+cityChange.forEach(e => e.addEventListener('click', openListOfCities))
+
+function openListOfCities() {
+	listOfCities.forEach(e => e.classList.toggle('hide'))
+	cityChange.forEach(e => e.classList.toggle('rotate'))
+}
 
 // Выбор города
 cities.forEach(e =>
 	e.addEventListener('click', function () {
-		city.innerText = this.innerText
-		saveToLocalStorage()
+		city.forEach(e => (e.innerText = this.innerText))
 		openListOfCities()
+		saveToLocalStorage()
 	})
 )
 
 function saveToLocalStorage() {
-	localStorage.setItem('city', JSON.stringify(city.innerText))
+	localStorage.setItem('city', JSON.stringify(city[0].innerText))
 }

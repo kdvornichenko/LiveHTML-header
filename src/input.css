@@ -8,7 +8,7 @@
 	}
 
 	.nav-item-top {
-		@apply px-2 py-1 transition-all hover:bg-black hover:text-white hover:rounded-md;
+		@apply cursor-pointer px-2 py-1 transition-all hover:bg-black hover:text-white hover:rounded-md;
 	}
 
 	.nav-item-bottom {
